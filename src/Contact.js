@@ -31,7 +31,7 @@ const Contact = () => {
       >
         {/* LinkedIn */}
         <a 
-          href="https://www.linkedin.com/in/your-profile" 
+          href="https://www.linkedin.com/in/kaustubh-pawar-344a31277/" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="flex items-center gap-2 bg-blue-600 px-6 py-3 rounded-lg text-white text-lg font-semibold shadow-lg hover:bg-blue-500 transition"
@@ -42,7 +42,7 @@ const Contact = () => {
 
         {/* GitHub */}
         <a 
-          href="https://github.com/yourgithub" 
+          href="https://github.com/KaustubhPawar22" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-lg text-white text-lg font-semibold shadow-lg hover:bg-gray-700 transition"
@@ -53,7 +53,7 @@ const Contact = () => {
 
         {/* Email */}
         <a 
-          href="mailto:your-email@example.com" 
+          href="mailto:kaustubhpawar500@gmail.com" 
           className="flex items-center gap-2 bg-green-600 px-6 py-3 rounded-lg text-white text-lg font-semibold shadow-lg hover:bg-green-500 transition"
         >
           <FaEnvelope size={24} />

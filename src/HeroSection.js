@@ -8,7 +8,7 @@ const HeroSection = () => {
     
     <section className="h-screen flex flex-col items-center justify-center text-center text-white bg-black pt-5">
       <motion.h1 
-        className="text-5xl font-bold"
+        className="text-5xl font-bold animate-fadeIn"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -36,25 +36,29 @@ const HeroSection = () => {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <div className="flex gap-4">
+
+        <Link
+          to="projects"
+          smooth={true}
+          duration={500}
+          offset={-70} // Adjust offset to account for navbar height
+          className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all cursor-pointer"
+          >
+          View Projects
+        </Link>
+
         {/* Resume Download Button */}
         <a 
           href="/resume.pdf" 
           download="KaustubhPawar_Resume" 
-          className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all"
+          className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all cursor-pointer"
+          
         >
-          Resume
+          Download Resume
         </a>
 
         
-        <Link
-                    to="projects"
-                    smooth={true}
-                    duration={500}
-                    offset={-70} // Adjust offset to account for navbar height
-                    className="px-6 py-3 bg-white-500 text-white rounded-md hover:bg-blue-600 transition-all cursor-pointer"
-                    >
-                    View Projects
-                  </Link>
+        
       </div>
       </motion.div>
     </section>
