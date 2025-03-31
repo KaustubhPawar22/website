@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { Link } from "react-scroll";
 
 const HeroSection = () => {
   return (
-    <div className="h-screen flex flex-col items-center justify-center text-center text-white bg-black">
+    
+    <section className="h-screen flex flex-col items-center justify-center text-center text-white bg-black pt-5">
       <motion.h1 
         className="text-5xl font-bold"
         initial={{ opacity: 0, y: -20 }}
@@ -33,10 +35,29 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <button className="bg-blue-500 px-6 py-2 text-lg rounded">View Projects</button>
-        <button className="bg-gray-700 px-6 py-2 text-lg rounded">Download Resume</button>
+        <div className="flex gap-4">
+        {/* Resume Download Button */}
+        <a 
+          href="/resume.pdf" 
+          download="KaustubhPawar_Resume" 
+          className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all"
+        >
+          Resume
+        </a>
+
+        
+        <Link
+                    to="projects"
+                    smooth={true}
+                    duration={500}
+                    offset={-70} // Adjust offset to account for navbar height
+                    className="px-6 py-3 bg-white-500 text-white rounded-md hover:bg-blue-600 transition-all cursor-pointer"
+                    >
+                    View Projects
+                  </Link>
+      </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

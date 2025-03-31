@@ -16,7 +16,7 @@ const Resume = () => {
       {/* Resume Download Button */}
       <motion.a
         href="/resume.pdf" // Replace with the actual path to your resume file
-        download="YourName_Resume.pdf"
+        download="KaustubhPawar_Resume.pdf"
         className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-500 transition"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -32,7 +32,7 @@ const Resume = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        {["Python", "SQL", "Tableau", "Power BI", "Excel", "Machine Learning", "Data Visualization", "Business Analytics"].map((skill, index) => (
+        {["Python", "SQL", "Tableau", "Power BI", "Excel", "Data Visualization", "Business Analytics"].map((skill, index) => (
           <span key={index} className="bg-gray-800 px-4 py-2 rounded text-white shadow-md">
             {skill}
           </span>
