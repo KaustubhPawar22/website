@@ -18,11 +18,12 @@ const HeroSection = () => {
       
       <TypeAnimation
         sequence={[
-          "Data Analyst", 2000,
-          "Business Analyst", 2000,
-          "Tableau Enthusiast", 2000,
-          "SQL & Python Expert", 2000
-        ]}
+          "Aspiring Business Analyst", 1500,
+          "Pattern Seeker🔍", 1500,
+          "Data Detective🕵️‍♂️", 1500,
+          "Spreadsheet Sorcerer✨", 1500,
+          "Professional Napper😴", 1500
+          ]}
         wrapper="span"
         speed={50}
         repeat={Infinity}
