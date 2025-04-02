@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaPython, FaDatabase, FaGithub, FaGit, FaRProject, FaFileExcel, FaMicrosoft } from "react-icons/fa";
-import { SiPowerbi, SiTableau, SiNumpy, SiPandas, SiScikitlearn } from "react-icons/si";
+import { FaPython, FaDatabase, FaGithub, FaGit, FaRProject, FaMicrosoft } from "react-icons/fa";
+import { SiTableau, SiNumpy, SiPandas, SiScikitlearn } from "react-icons/si";
 
 const Resume = () => {
   return (
@@ -10,7 +10,7 @@ const Resume = () => {
         
         {/* Resume Heading */}
         <motion.h2 
-          className="text-4xl font-bold text-center mb-12"
+          className="text-4xl font-bold text-center mb-5"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -22,7 +22,7 @@ const Resume = () => {
         <motion.a
           href="/resume.pdf" // Replace with the actual path to your resume file
           download="KaustubhPawar_Resume.pdf"
-          className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-500 transition mb-8"
+          className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-500 transition mb-20"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -32,7 +32,7 @@ const Resume = () => {
 
         {/* Skills Heading */}
         <motion.h2 
-          className="text-4xl font-bold text-center mb-8"
+          className="text-4xl font-bold text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -41,11 +41,11 @@ const Resume = () => {
         </motion.h2>
 
         <motion.div 
-  className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center" 
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 1 }}
->
+          className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center" 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
   {/* Skill Icons */}
   <motion.div className="space-y-2 flex flex-col items-center justify-center">
     <FaPython className="text-yellow-500 text-4xl" />
@@ -70,6 +70,7 @@ const Resume = () => {
   <motion.div className="space-y-2 flex flex-col items-center justify-center">
     <img 
       src="https://cdn.worldvectorlogo.com/logos/microsoft-excel-2013.svg" 
+      alt="Excel"
       className="w-10 h-10 object-contain" 
     />
     <p>Excel</p>
@@ -78,6 +79,7 @@ const Resume = () => {
   <motion.div className="space-y-2 flex flex-col items-center justify-center">
     <img 
       src="https://cdn.worldvectorlogo.com/logos/google-sheets-logo-icon.svg"
+      alt="Sheets"
       className="w-10 h-10 object-contain" 
     />
     <p>Sheets</p>

@@ -1,27 +1,39 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Element } from "react-scroll"; // To wrap sections
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import About from "./About";
 import Projects from "./Projects";
-import ProjectDetail from "./ProjectDetailPage";
 import Resume from "./Resume";
 import Contact from "./Contact";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import ProjectDetails from "./ProjectDetails"; // Import Project Details Page
+import Footer from "./Footer";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HeroSection />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:slug" element={<ProjectDetail />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      
+      <div className="bg-black min-h-screen text-white">
+        <Navbar />
+        <Routes>
+          {/* Main Page with Scroll Sections */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Element name="home"><HeroSection /></Element>
+                <Element name="about"><About /></Element>
+                <Element name="projects"><Projects /></Element>
+                <Element name="resume"><Resume /></Element>
+                <Element name="contact"><Contact /></Element>
+                <Element name="footer"><Footer /></Element>
+              </>
+            }
+          />
+          {/* Project Details Page */}
+          <Route path="/projects/:slug" element={<ProjectDetails />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

@@ -39,7 +39,7 @@ const HeroSection = () => {
         <div className="flex gap-4">
 
         <Link
-          to="projects"
+          to="Projects"
           smooth={true}
           duration={500}
           offset={-70} // Adjust offset to account for navbar height

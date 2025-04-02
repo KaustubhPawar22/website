@@ -7,9 +7,9 @@ const projects = [
     title: "Mumbai Housing Market Analysis",
     description: "An analysis of Mumbai’s real estate trends using Python and Tableau.",
     image: "https://hips.hearstapps.com/hmg-prod/images/mcdowell-farmhouse-exterior-6659429cc95fc.jpg?crop=0.651xw:0.976xh;0.309xw,0.0240xh&resize=1120:*",
-    tableauLink: "https://public.tableau.com/views/YourDashboard",
+    tableauLink: "https://public.tableau.com/views/Final_17433630682940/MMRHousingReport?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
     githubLink: "https://github.com/yourgithub/mumbai-housing-analysis",
-    tools: ["Kaggle", "Excel", "Tableau"],
+    tools: ["Kaggle", "Excel", "Tableau", "Python"],
     date: "July 2023",
     detailedDescription: "This project began with collecting housing data from Kaggle and public sources. We cleaned and preprocessed the data, performed exploratory data analysis, and built interactive dashboards using Tableau.",
     process: [
