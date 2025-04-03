@@ -22,7 +22,8 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-6 py-12"
+      className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-6 py-6"
+      
     >
       <motion.h2
         className="text-3xl font-semibold text-center mb-6 tracking-wide"
@@ -137,6 +138,9 @@ const Contact = () => {
           <FaEnvelope />
         </a>
       </motion.div>
+      <footer className="text-center py-4 text-gray-400 text-sm bg-gray-900">
+        © {new Date().getFullYear()} Kaustubh Pawar. All rights reserved.
+      </footer>
     </section>
   );
 };

@@ -1,15 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Element } from "react-scroll"; // To wrap sections
+import { Element } from "react-scroll";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import About from "./About";
 import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
-import ProjectDetails from "./ProjectDetails"; // Import Project Details Page
-import Footer from "./Footer";
-
+import ProjectDetails from "./ProjectDetails";
 function App() {
   return (
     <Router>
@@ -26,7 +24,6 @@ function App() {
                 <Element name="projects"><Projects /></Element>
                 <Element name="resume"><Resume /></Element>
                 <Element name="contact"><Contact /></Element>
-                <Element name="footer"><Footer /></Element>
               </>
             }
           />

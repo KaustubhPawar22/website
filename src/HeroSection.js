@@ -18,7 +18,7 @@ const HeroSection = () => {
       
       <TypeAnimation
         sequence={[
-          "Aspiring Business Analyst", 1500,
+          "Data Analyst", 1500,
           "Pattern Seeker🔍", 1500,
           "Data Detective🕵️‍♂️", 1500,
           "Spreadsheet Sorcerer✨", 1500,
@@ -39,7 +39,7 @@ const HeroSection = () => {
         <div className="flex gap-4">
 
         <Link
-          to="Projects"
+          to="projects"
           smooth={true}
           duration={500}
           offset={-70} // Adjust offset to account for navbar height

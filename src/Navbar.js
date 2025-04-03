@@ -59,21 +59,41 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   return (
-    <nav className="fixed top-0 w-full bg-black bg-opacity-90 text-white py-4 px-8 flex justify-between items-center shadow-md z-30">
-      <h1 className="text-2xl font-bold text-blue-500">My Portfolio</h1>
+    <nav className="fixed top-0 w-full h-12 bg-black bg-opacity-90 text-white py-4 px-8 flex justify-between items-center shadow-md z-50 ">
+      <a
+        href="/"
+        onClick={(e) => {
+          e.preventDefault();
 
-      <ul className="hidden md:flex gap-6 text-lg">
+          const scrollToTop = () => {
+            const scrollStep = -window.scrollY / 25; // Adjust for speed
+            if (window.scrollY !== 0) {
+              window.scrollBy(0, scrollStep);
+              requestAnimationFrame(scrollToTop);
+            } else {
+              window.location.reload(); // Refresh only after reaching top
+            }
+          };
+
+          scrollToTop();
+        }}
+        className="text-2xl font-bold text-blue-500"
+      >
+        My Portfolio
+      </a>
+
+      <ul className="hidden md:flex gap-6 text-sm font-medium">
         {["home", "about", "projects", "resume", "contact"].map((item) => (
           <li key={item}>
             <ScrollLink
               to={item}
               smooth={true}
               duration={500}
-              offset={-50}
+              offset={-25}
               onClick={() => setActiveSection(item)}
               className={`cursor-pointer ${
                 activeSection === item
-                  ? "text-blue-500 font-bold border-b-2 border-blue-500"
+                  ? "text-blue-500 font-bold border-b-2 border-blue-500 "
                   : "hover:text-blue-500"
               }`}
             >
@@ -104,8 +124,8 @@ const Navbar = () => {
               <ScrollLink
                 to={item}
                 smooth={true}
-                duration={100}
-                offset={-50}
+                duration={500}
+                offset={-20}
                 onClick={() => {
                   toggleMenu();
                   setActiveSection(item);

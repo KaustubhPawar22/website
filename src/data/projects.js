@@ -1,30 +1,101 @@
-
-// src/data/projects.js
-
 const projects = [
   {
     slug: "mmr-housing-report",
-    title: "Mumbai Housing Market Analysis",
-    description: "An analysis of Mumbai’s real estate trends using Python and Tableau.",
-    image: "https://hips.hearstapps.com/hmg-prod/images/mcdowell-farmhouse-exterior-6659429cc95fc.jpg?crop=0.651xw:0.976xh;0.309xw,0.0240xh&resize=1120:*",
-    tableauLink: "https://public.tableau.com/views/Final_17433630682940/MMRHousingReport?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-    githubLink: "https://github.com/yourgithub/mumbai-housing-analysis",
-    tools: ["Kaggle", "Excel", "Tableau", "Python"],
+    title: "Mumbai Housing Price Analysis: Insights for Buyers & Investors",
+    description: "Comprehensive analysis of Mumbai's real estate market trends",
+    image: "/images/projects/housing-thumbnail.jpg",
     date: "July 2023",
-    detailedDescription: "This project began with collecting housing data from Kaggle and public sources. We cleaned and preprocessed the data, performed exploratory data analysis, and built interactive dashboards using Tableau.",
-    process: [
-      "Collected raw housing data from multiple sources.",
-      "Cleaned data to remove outliers and missing values.",
-      "Conducted exploratory data analysis to uncover trends.",
-      "Built predictive models for housing prices.",
-      "Created interactive dashboards in Tableau to present findings."
+    tools: ["Python", "Pandas", "Tableau", "Kaggle", "Excel"],
+    
+    // Report Content Sections
+    abstract: "This analysis of Mumbai's residential real estate market reveals key trends and actionable insights through data analysis and visualization.",
+    
+    introduction: {
+      overview: "Mumbai's dynamic real estate market analysis focusing on:",
+      objectives: [
+        "Identify regional price trends",
+        "Analyze property size impact",
+        "Compare property status pricing"
+      ],
+      questions: [
+        "Which regions are most expensive?",
+        "How does BHK correlate with price?",
+        "Price distribution by property status?"
+      ]
+    },
+
+    dataDescription: {
+      source: "https://www.kaggle.com/datasets/dravidvaishnav/mumbai-house-prices",
+      variables: ["Price (Cr)", "Area (sq.ft.)", "BHK", "Locality", "Status", "Age"],
+      cleaningSteps: [
+        "Removed 120 duplicates",
+        "Standardized price units",
+        "Categorized unknown ages as Resale"
+      ]
+    },
+
+    eda: {
+      sections: [
+        {
+          title: "Price Distribution by Region",
+          image: "/images/projects/price_by_region.png",
+          insights: [
+            "Malad West & Andheri West: High-price leaders",
+            "Thane West & Kandivali East: Affordable options"
+          ]
+        },
+        {
+          title: "BHK vs Price Analysis",
+          image: "/images/projects/bhk_vs_price.png",
+          insights: [
+            "3BHK median price: ₹2.8 Cr",
+            "Studio apartments concentrated in Worli"
+          ]
+        },
+        {
+          title: "Price per Sq.Ft.",
+          image: "/images/projects/price_per_sqft.png",
+          insights: [
+            "South Mumbai: ₹35,000/sq.ft.",
+            "Thane: ₹12,000/sq.ft."
+          ]
+        }
+      ]
+    },
+
+    findings: [
+      "Location premium: Bandra properties 40% more expensive",
+      "Resale discount: 20% cheaper than new properties",
+      "Ready-to-move premium: 15% higher than under-construction"
     ],
-    results: "The analysis revealed key trends such as rising prices in certain regions and significant correlations between property size and price, helping investors target high-growth areas.",
-    challenges: "Handling missing data and ensuring consistency across multiple data sources was a major challenge.",
-    conclusion: "This project provided actionable insights for stakeholders and set the foundation for future predictive analyses in the real estate market.",
-    resultImage: "https://hips.hearstapps.com/hmg-prod/images/mcdowell-farmhouse-exterior-6659429cc95fc.jpg?crop=0.651xw:0.976xh;0.309xw,0.0240xh&resize=1120:*"
+
+    challenges: [
+      "10% missing age data",
+      "Vague locality descriptions ('Reputed Builder')",
+      "Non-standardized area measurements"
+    ],
+
+    recommendations: {
+      buyers: [
+        "Target Kanjurmarg/Borivali for affordability",
+        "Consider resale properties for discounts"
+      ],
+      investors: [
+        "Focus on Powai/Andheri East developments",
+        "Monitor infrastructure projects in Thane corridor"
+      ]
+    },
+
+    technical: {
+      tools: ["Python", "Pandas", "Matplotlib", "Tableau"],
+      dashboard: "https://public.tableau.com/app/profile/kaustubh.pawar6926/viz/Final_17433630682940/MMRHousingReport",
+      attachments: {
+        notebook: "/documents/mumbai-housing-analysis.ipynb",
+        report: "/documents/mumbai-housing-report.pdf"
+      }
+    }
   },
-  // Additional projects can be added here.
+  // ... other projects
 ];
 
 export default projects;
